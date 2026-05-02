@@ -1,0 +1,573 @@
+/* ═══════════════════════════════════════════
+   RECEIPT TEMPLATE STYLES (rcpt)
+   Unified design for fee receipts, salary slips, reports
+   ═══════════════════════════════════════════ */
+
+.rcpt {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  background: #fff;
+  color: #111;
+  font-family: 'Noto Sans Bengali', 'Tiro Bangla', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  border: 2px solid #1a5c1a;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* ── Header ── */
+.rcpt-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1a5c1a;
+  margin-bottom: 8px;
+}
+
+.rcpt-logo {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid #1a5c1a;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.rcpt-logo--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0ece0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a5c1a;
+}
+
+.rcpt-header-text {
+  flex: 1;
+  text-align: center;
+}
+.rcpt-inst-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #1a5c1a;
+  margin: 0;
+  line-height: 1.3;
+}
+.rcpt-inst-sub {
+  font-size: 11px;
+  color: #555;
+  margin: 1px 0;
+}
+.rcpt-inst-addr {
+  font-size: 10px;
+  color: #777;
+  margin: 1px 0;
+}
+.rcpt-inst-contacts {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-size: 9px;
+  color: #888;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+/* ── Title bar ── */
+.rcpt-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #1a5c1a;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.rcpt-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.rcpt-copy-label {
+  font-size: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 1px 8px;
+  border-radius: 10px;
+}
+
+/* ── Info grid ── */
+.rcpt-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 16px;
+  padding: 6px 0 8px;
+  border-bottom: 1px dashed #ccc;
+  margin-bottom: 8px;
+}
+.rcpt-info-row {
+  display: flex;
+  gap: 4px;
+  font-size: 11px;
+}
+.rcpt-info-label {
+  color: #777;
+  white-space: nowrap;
+}
+.rcpt-info-value {
+  font-weight: 600;
+  color: #222;
+}
+
+/* ── Items table ── */
+.rcpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+.rcpt-th {
+  background: #f0ece0;
+  color: #333;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 5px 8px;
+  border: 1px solid #d5cbb0;
+  text-align: center;
+}
+.rcpt-th-sl {
+  width: 36px;
+  text-align: center;
+}
+.rcpt-th-amt {
+  width: 80px;
+}
+.rcpt-td {
+  padding: 4px 8px;
+  border: 1px solid #e8e0cc;
+  font-size: 11px;
+  text-align: center;
+}
+.rcpt-td-sl {
+  text-align: center;
+  color: #999;
+}
+.rcpt-td-amt {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Summary ── */
+.rcpt-summary {
+  border: 1.5px solid #1a5c1a;
+  border-radius: 4px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+}
+.rcpt-sum-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 2px 0;
+  font-weight: 600;
+}
+.rcpt-sum-paid {
+  color: #1a5c1a;
+  font-size: 14px;
+  font-weight: 800;
+  border-top: 1px solid #ccc;
+  padding-top: 4px;
+  margin-top: 2px;
+}
+.rcpt-sum-discount {
+  color: #c0392b;
+}
+.rcpt-sum-due {
+  color: #d35400;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ── Meta (method, note) ── */
+.rcpt-meta {
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 14px;
+}
+.rcpt-meta p {
+  margin: 2px 0;
+}
+
+/* ── Signatures ── */
+.rcpt-sig {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+.rcpt-sig-box {
+  text-align: center;
+  flex: 1;
+}
+.rcpt-sig-line {
+  border-top: 1px solid #555;
+  margin-bottom: 3px;
+  width: 100%;
+}
+.rcpt-sig-box span {
+  font-size: 9px;
+  color: #777;
+}
+
+/* ── Footer ── */
+.rcpt-footer {
+  text-align: center;
+  font-size: 9px;
+  color: #999;
+  border-top: 1px dashed #ccc;
+  padding-top: 6px;
+}
+
+
+/* ═══════════════════════════════════════════
+   REGISTRATION FORM STYLES (rf)
+   Used by buildRegistrationFormHTML
+   ═══════════════════════════════════════════ */
+.rf-section {
+  border-bottom: 1px dashed #d5cbb0;
+}
+.rf-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 12px;
+  margin: 0;
+}
+.rf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 16px;
+  padding: 6px 12px;
+}
+.rf-row {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+  padding: 2px 0;
+  font-size: 10.5px;
+}
+.rf-row-full {
+  grid-column: 1 / -1;
+}
+.rf-label {
+  color: #666;
+  white-space: nowrap;
+  min-width: 90px;
+  font-weight: 500;
+}
+.rf-val {
+  color: #222;
+  word-break: break-word;
+}
+.rf-val-bold {
+  font-weight: 700;
+}
+
+
+/* ═══════════════════════════════════════════
+   REPORT TEMPLATE STYLES (rpt)
+   Used by buildReportHTML for portrait-mode report printing
+   ═══════════════════════════════════════════ */
+
+.rpt {
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  color: #111;
+  font-family: 'Noto Sans Bengali', 'Tiro Bangla', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ── Report Header ── */
+.rpt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2.5px solid #1a5c1a;
+  margin-bottom: 8px;
+}
+.rpt-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #1a5c1a;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.rpt-logo--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0ece0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a5c1a;
+}
+.rpt-header-text {
+  flex: 1;
+  text-align: center;
+}
+.rpt-inst-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a5c1a;
+  margin: 0;
+  line-height: 1.3;
+}
+.rpt-inst-sub {
+  font-size: 11px;
+  color: #555;
+  margin: 1px 0;
+}
+.rpt-inst-addr {
+  font-size: 10px;
+  color: #777;
+  margin: 1px 0;
+}
+.rpt-custom-header {
+  font-size: 12px;
+  color: #1a5c1a;
+  font-weight: 600;
+  margin: 2px 0;
+}
+.rpt-inst-contacts {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-size: 9px;
+  color: #888;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+/* ── Report Title ── */
+.rpt-title-bar {
+  background: #1a5c1a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.rpt-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.rpt-subtitle {
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ── Summary Cards ── */
+.rpt-summary-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  justify-content: center;
+}
+.rpt-sum-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px 16px;
+  min-width: 120px;
+  text-align: center;
+  flex: 1;
+  max-width: 180px;
+}
+.rpt-sum-bar {
+  height: 3px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.rpt-sum-value {
+  font-size: 15px;
+  font-weight: 800;
+}
+.rpt-sum-label {
+  font-size: 10px;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* ── Report Table ── */
+.rpt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  font-size: 10.5px;
+}
+.rpt-th {
+  background: #f0ece0;
+  color: #333;
+  font-weight: 700;
+  padding: 5px 8px;
+  border: 1px solid #d5cbb0;
+  text-align: right;
+  font-size: 10.5px;
+}
+.rpt-td {
+  padding: 4px 8px;
+  border: 1px solid #e8e0cc;
+  font-size: 10.5px;
+  text-align: right;
+}
+.rpt-td-sl {
+  text-align: center;
+  color: #888;
+}
+.rpt-tr-alt td {
+  background: #fafaf5;
+}
+
+/* ── Report Signatures ── */
+.rpt-sig {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.rpt-sig-box {
+  text-align: center;
+  flex: 1;
+}
+.rpt-sig-line {
+  border-top: 1px solid #555;
+  margin-bottom: 3px;
+  width: 100%;
+}
+.rpt-sig-box span {
+  font-size: 9px;
+  color: #777;
+}
+
+/* ── Report Footer & Note ── */
+.rpt-note {
+  font-size: 10px;
+  color: #666;
+  margin-bottom: 8px;
+  text-align: center;
+  font-style: italic;
+}
+.rpt-custom-footer {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a5c1a;
+  margin-bottom: 4px;
+}
+.rpt-footer {
+  text-align: center;
+  font-size: 9px;
+  color: #999;
+  border-top: 1px dashed #ccc;
+  padding-top: 6px;
+}
+
+
+/* ═══════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════ */
+
+/* Receipt print container — used by printReceipt() */
+.print-receipt-container {
+  display: none;
+}
+
+@media print {
+  /* Hide ALL app UI */
+  body > *:not(.print-receipt-container) {
+    display: none !important;
+  }
+  .print-receipt-container {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #fff;
+    overflow: visible;
+  }
+
+  /* ── Landscape mode for fee/salary receipts (2 per page) ── */
+  .print-receipt-container.print-landscape .print-page {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    height: 100vh;
+    page-break-after: always;
+    break-after: page;
+  }
+  .print-receipt-container.print-landscape .print-half {
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    border-right: 1px dashed #999;
+    box-sizing: border-box;
+  }
+  .print-receipt-container.print-landscape .print-half:last-child {
+    border-right: none;
+  }
+  .print-receipt-container.print-landscape .rcpt {
+    max-width: 100%;
+    border: 1.5px solid #1a5c1a;
+    font-size: 10px;
+  }
+
+  /* ── Portrait mode for reports ── */
+  .print-receipt-container.print-portrait .rpt {
+    max-width: 100%;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .print-receipt-container.print-portrait .rpt-table {
+    font-size: 9.5px;
+  }
+  .print-receipt-container.print-portrait .rpt-th,
+  .print-receipt-container.print-portrait .rpt-td {
+    padding: 3px 6px;
+    font-size: 9.5px;
+  }
+  .print-receipt-container.print-portrait .rpt-sum-card {
+    padding: 6px 10px;
+    min-width: 100px;
+  }
+  .print-receipt-container.print-portrait .rpt-sum-value {
+    font-size: 13px;
+  }
+
+  /* Portrait mode receipt fallback */
+  .print-receipt-container.print-portrait .rcpt {
+    max-width: 100%;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 8mm;
+  }
+}
